@@ -143,4 +143,7 @@
     <!-- NavigationBar Gestural Mode Tweaks -->
     <string name="gesture_pill_message">Hide the navigation bar pill for seamless fullscreen gestures.</string>
     <string name="gesture_pill_toggle_title">Full screen gestures</string>
+
+    <!-- Build Version -->
+    <string name="aosip_version">Build Version</string>
 </resources>

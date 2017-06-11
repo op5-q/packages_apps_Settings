@@ -45,6 +45,14 @@
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.MainlineModuleVersionPreferenceController"/>
 
+    <!-- AOSiP Version -->
+    <Preference
+        android:key="aosip_version"
+        android:title="@string/aosip_version"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.AOSiPVersionPreferenceController"/>
+
     <!-- Baseband -->
     <Preference
         android:key="base_band"
