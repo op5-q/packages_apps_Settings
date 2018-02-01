@@ -169,4 +169,6 @@
     <string name="powermenu_lockscreen_title">Power menu visibility</string>
     <string name="powermenu_lockscreen_summary">Display power menu on a secured lockscreen</string>
 
+    <!-- Notification log -->
+    <string name="notification_log_summary">Show notifications history log</string>
 </resources>
