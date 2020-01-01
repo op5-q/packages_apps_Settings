@@ -178,5 +178,5 @@ public class Settings extends SettingsActivity {
     public static class AccountDashboardActivity extends SettingsActivity {}
     public static class SystemDashboardActivity extends SettingsActivity {}
     public static class NitrogenSettingsActivity extends SettingsActivity {}
-
+    public static class StartThemesActivity extends SettingsActivity { /* empty */ }
 }
