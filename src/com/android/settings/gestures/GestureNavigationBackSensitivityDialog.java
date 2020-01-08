@@ -37,6 +37,7 @@ import com.android.settings.core.instrumentation.InstrumentedDialogFragment;
 public class GestureNavigationBackSensitivityDialog extends InstrumentedDialogFragment {
 
     private boolean mArrowSwitchChecked;
+    private boolean mGesturePillSwitchChecked;
 
     private static final String TAG = "GestureNavigationBackSensitivityDialog";
     private static final String KEY_BACK_SENSITIVITY = "back_sensitivity";
@@ -78,8 +79,20 @@ public class GestureNavigationBackSensitivityDialog extends InstrumentedDialogFr
                 mArrowSwitchChecked = arrowSwitch.isChecked() ? true : false;
             }
         });
+
         final SeekBar backDeadzoneSeekbar = view.findViewById(R.id.back_deadzone_seekbar);
         backDeadzoneSeekbar.setProgress(getArguments().getInt(KEY_BACK_DEAD_Y_ZONE));
+
+        final Switch gesturePillSwitch = view.findViewById(R.id.gesture_pill_switch);
+        mGesturePillSwitchChecked = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.GESTURE_PILL_TOGGLE, 0) == 1;
+        gesturePillSwitch.setChecked(mGesturePillSwitchChecked);
+        gesturePillSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mGesturePillSwitchChecked = gesturePillSwitch.isChecked() ? true : false;
+            }
+        });
         return new AlertDialog.Builder(getContext())
                 .setTitle(R.string.back_gesture_settings_dialog_title)
                 .setView(view)
@@ -94,6 +107,11 @@ public class GestureNavigationBackSensitivityDialog extends InstrumentedDialogFr
                     getArguments().putInt(KEY_BACK_DEAD_Y_ZONE, backDeadYZoneMode);
                     SystemNavigationGestureSettings.setBackDeadYZone(getActivity(),
                             backDeadYZoneMode);
+                    Settings.System.putInt(getActivity().getContentResolver(),
+                            Settings.System.GESTURE_PILL_TOGGLE, mGesturePillSwitchChecked ? 1 : 0);
+                    SystemNavigationGestureSettings.setBackGestureOverlaysToUse(getActivity());
+                    SystemNavigationGestureSettings.setCurrentSystemNavigationMode(getActivity(),
+                            getOverlayManager(), SystemNavigationGestureSettings.getCurrentSystemNavigationMode(getActivity()));
                 })
                 .create();
     }
