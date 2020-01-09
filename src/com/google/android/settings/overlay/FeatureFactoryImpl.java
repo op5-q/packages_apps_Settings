@@ -9,26 +9,16 @@ import com.android.settings.search.SearchFeatureProvider;
 import com.android.settings.dashboard.suggestions.SuggestionFeatureProvider;
 import com.android.settings.applications.ApplicationFeatureProvider;
 import com.android.settings.fuelgauge.PowerUsageFeatureProvider;
-import com.google.android.settings.accounts.AccountFeatureProviderGoogleImpl;
 import com.google.android.settings.applications.ApplicationFeatureProviderGoogleImpl;
 import com.google.android.settings.dashboard.suggestions.SuggestionFeatureProviderGoogleImpl;
 import com.google.android.settings.search.SearchFeatureProviderGoogleImpl;
 import com.google.android.settings.fuelgauge.PowerUsageFeatureProviderGoogleImpl;
 
 public final class FeatureFactoryImpl extends com.android.settings.overlay.FeatureFactoryImpl {
-    private AccountFeatureProvider mAccountFeatureProvider;
     private ApplicationFeatureProvider mApplicationFeatureProvider;
     private SearchFeatureProvider mSearchFeatureProvider;
     private SuggestionFeatureProvider mSuggestionFeatureProvider;
     private PowerUsageFeatureProvider mPowerUsageProvider;
-
-    @Override
-    public AccountFeatureProvider getAccountFeatureProvider() {
-        if (mAccountFeatureProvider == null) {
-            mAccountFeatureProvider = new AccountFeatureProviderGoogleImpl();
-        }
-        return mAccountFeatureProvider;
-    }
 
     @Override
     public SearchFeatureProvider getSearchFeatureProvider() {
