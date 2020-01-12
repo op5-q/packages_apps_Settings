@@ -21,14 +21,6 @@
     android:key="top_level_settings">
 
     <Preference
-        android:key="top_level_themes"
-        android:title="@string/du_themes_title"
-        android:summary="@string/du_themes_summary"
-        android:icon="@drawable/ic_homepage_du_themes"
-        android:fragment="com.android.settings.StartThemes"
-        android:order="-125"/>
-
-    <Preference
         android:key="top_level_network"
         android:title="@string/network_dashboard_title"
         android:summary="@string/summary_placeholder"
@@ -140,6 +132,14 @@
         android:icon="@drawable/ic_homepage_nitrogen"
         android:order="9"
         android:fragment="com.nitrogen.settings.NitrogenSettings"/>
+
+    <Preference
+        android:key="top_level_themes"
+        android:title="@string/du_themes_title"
+        android:summary="@string/du_themes_summary"
+        android:icon="@drawable/ic_homepage_du_themes"
+        android:fragment="com.android.settings.StartThemes"
+        android:order="8"/>	
 
     <Preference
         android:key="top_level_system"
