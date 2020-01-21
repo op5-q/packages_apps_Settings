@@ -182,6 +182,12 @@
             android:title="@string/global_actions_advanced_reboot_title"
             android:summary="@string/global_actions_advanced_reboot_summary"
             android:defaultValue="true" />
+        
+        <com.nitrogen.settings.preferences.SecureSettingSwitchPreference
+            android:key="secured_lock_power_menu"
+            android:title="@string/powermenu_lockscreen_title"
+            android:summary="@string/powermenu_lockscreen_summary"
+            android:defaultValue="false" />
 
         <Preference
             android:key="global_actions"

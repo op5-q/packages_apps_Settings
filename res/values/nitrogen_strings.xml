@@ -164,4 +164,8 @@
     <string name="global_actions_advanced_reboot_title">Enable advanced restart</string>
     <string name="global_actions_advanced_reboot_summary">Show options for recovery and bootloader</string>
 
+    <!-- Power Menu on lockscreen -->
+    <string name="powermenu_lockscreen_title">Power menu visibility</string>
+    <string name="powermenu_lockscreen_summary">Display power menu on a secured lockscreen</string>
+
 </resources>
