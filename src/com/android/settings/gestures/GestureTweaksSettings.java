@@ -37,9 +37,9 @@ import com.android.settings.search.Indexable;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
-import com.pixeldust.settings.preferences.CustomSeekBarPreference;
-import com.pixeldust.settings.preferences.SystemSettingListPreference;
-import com.pixeldust.settings.preferences.SystemSettingSwitchPreference;
+import com.nitrogen.settings.preferences.CustomSeekBarPreference;
+import com.nitrogen.settings.preferences.SystemSettingListPreference;
+import com.nitrogen.settings.preferences.SystemSettingSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -181,7 +181,7 @@ public class GestureTweaksSettings extends SettingsPreferenceFragment
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.PIXELDUST;
+        return MetricsProto.MetricsEvent.NITROGEN_SETTINGS;
     }
 
     public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
