@@ -50,6 +50,7 @@ import androidx.annotation.VisibleForTesting;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.app.LoaderManager.LoaderCallbacks;
 import androidx.loader.content.Loader;
+import androidx.preference.Preference;
 
 import com.android.settings.R;
 import com.android.settings.SettingsActivity;
