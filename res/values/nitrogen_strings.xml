@@ -136,6 +136,7 @@
     <string name="action_mediaplay_action">Media Play/Pause</string>
     <string name="action_ringer_modes">Ringer modes</string>
     <string name="kill_app">Kill foreground app</string>
+    <string name="split_screen">Split screen</string>
 
     <!-- Density category -->
     <string name="density_category">Density options</string>
